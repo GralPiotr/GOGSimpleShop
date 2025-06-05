@@ -1,0 +1,54 @@
+.header {
+  height: 59px;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(0deg, #DEDEDE, #DEDEDE),
+  linear-gradient(360deg, rgba(220, 220, 220, 0.0001) 0%, rgba(255, 255, 255, 0.5) 93.45%, rgba(255, 255, 255, 0.49) 100%);
+  display: flex;
+
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1060px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .cart-button {
+      height: 59px;
+      width: 59px;
+      cursor: pointer;
+      border: none;
+      border-left: 1px solid #B8B8B8;
+      border-right: 1px solid #B8B8B8;
+      font-family: 'Source Sans Pro', 'Segoe UI', Roboto, sans-serif;
+
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .cart-icon-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 0.15rem;
+      }
+
+      .cart-icon {
+        width: 16px;
+        height: 15px;
+        display: block;
+      }
+
+      .cart-count {
+
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0px;
+
+      }
+    }
+  }
+}

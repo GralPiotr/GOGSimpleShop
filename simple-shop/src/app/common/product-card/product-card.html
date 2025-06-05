@@ -1,0 +1,22 @@
+@if (product) {
+  <div class="card" >
+    <div class="image-container">
+      <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [height]="'370'" [width]="'100'" [alt]="product.name"class="card-image">
+
+    </div>
+
+    <h3>{{ product.name }}</h3>
+    @if (product.isOwned) {
+      <button disabled>Owned</button>
+    }
+    @else if (status === 'inCart') {
+      <button disabled>In Cart</button>
+    }
+    @else if (status === 'available') {
+      <button>{{ product.price | currency }}</button>
+    }
+
+
+  </div>
+
+}

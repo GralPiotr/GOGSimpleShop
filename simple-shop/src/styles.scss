@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+  font-size: 15px;
+}
+body {
+  margin: 0;
+  height: 1200px;
+  //background: linear-gradient(180deg, rgba(108, 54, 173, 0.1) 0%, rgba(194, 194, 194, 0.0001) 100%);
+  background: #CDCDCD;
+  font-family: 'Source Sans Pro', 'Segoe UI', Roboto, sans-serif;
+}
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+h5 {
+  font-size: 0.85rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
