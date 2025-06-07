@@ -1,22 +1,27 @@
 @if (product) {
-  <div class="card" >
+  <div class="card">
     <div class="image-container">
-      <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [height]="'370'" [width]="'100'" [alt]="product.name"class="card-image">
+      <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [height]="'370'" [width]="'100'" [alt]="product.name"
+           class="card-image">
 
     </div>
+    <div class="content-container">
 
-    <h3>{{ product.name }}</h3>
-    @if (product.isOwned) {
-      <button disabled>Owned</button>
-    }
-    @else if (status === 'inCart') {
-      <button disabled>In Cart</button>
-    }
-    @else if (status === 'available') {
-      <button>{{ product.price | currency }}</button>
-    }
-
-
+      <div class="title" >
+        <h3 [title]="product.name">{{ product.name|uppercase }}</h3>
+      </div>
+      <div class="actions">
+        @if (product.isOwned) {
+          <button  class="owned">OWNED</button>
+        } @else if (status === 'inCart') {
+          <button disabled >IN CART</button>
+        } @else if (status === 'available') {
+          @if (product.discount) {
+            <span class="discount-badge" inert>-{{product.discount}}%</span>
+          }
+          <button (click)="onCLick()">{{ product.price | currency }}</button>
+        }
+      </div>
+    </div>
   </div>
-
 }

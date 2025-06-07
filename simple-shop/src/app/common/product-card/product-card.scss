@@ -1,17 +1,92 @@
 
-.card{
+.card {
   background: #E0E0E0;
-  box-shadow: 0px 1px 5px 0px #0000004D;
+  //box-shadow: 0px 1px 5px 0px #0000004D;
   width: 196px;
+  height: 186px;
+
   .image-container {
     min-height: 110px;
-    .card-image{
+
+    .card-image {
       width: 196px;
       height: auto;
       aspect-ratio: 196 / 110;
       object-fit: cover;
 
 
+    }
+  }
+
+  .content-container {
+    padding: 9px;
+
+    .title {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+      height: calc(1.2em * 2);
+
+      h3 {
+        font-size: 14px;
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+
+    .actions {
+
+      text-align: end;
+      display: flex;
+      gap: 6px;
+      justify-content: flex-end;
+      height: 22px;
+
+      button {
+        color: #404040;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        letter-spacing: 0;
+        background-color: transparent;
+        border: 1px solid #979797;
+        box-shadow: 1px 1px 1px 0px #C6C6C680;
+
+        border-radius: 2px;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        cursor:default;
+        pointer-events: none;
+      }
+
+      button.owned {
+        color: #979797;
+        border: 1px solid #979797;
+        box-shadow: 0px 1px 1px 0px #C6C6C680;
+        cursor: default;
+      }
+
+      .discount-badge {
+        background: #00905E;
+        border-radius: 2px;
+        height: 22px;
+        min-width: 42px;
+
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: right;
+        color: #F2F2F2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 

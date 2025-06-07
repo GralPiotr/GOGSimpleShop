@@ -1,0 +1,24 @@
+<div class="cart-container">
+  <div class="cart-header">
+    @if (products().length===1){
+      <span>{{ products().length }} ITEM IN CART</span>
+    } @else {
+      <span>{{ products().length }} ITEMS IN CART</span>
+    }
+
+    <span>{{ totalPrice() | currency:'USD' }}</span>
+    <button (click)="clearCart()" class="clear-cart">
+      <span>CLEAR CART</span>
+    </button>
+  </div>
+
+  <div class="cart-items">
+    @for (product of products(); track product.id) {
+      <div class="item">
+        <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [width]="100" [height]="60">
+        <span class="name">{{ product.name }}</span>
+        <span class="price">{{ product.price | currency:'USD' }}</span>
+      </div>
+    }
+  </div>
+</div>

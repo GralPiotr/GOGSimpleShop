@@ -51,4 +51,17 @@
       }
     }
   }
+
+  .cart-wrapper {
+    position: relative;
+
+    .cart-popover {
+      position: absolute;
+      top: 85%;
+      right: 53%;
+      width: 370px;
+      margin-top: 0.5rem;
+      z-index: 100;
+    }
+  }
 }

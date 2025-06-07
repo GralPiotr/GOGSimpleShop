@@ -11,11 +11,12 @@ import {ProductCard} from '../product-card/product-card';
   styleUrl: './product-list.scss'
 })
 export class ProductList {
-  @Input({required:true}) products!: Signal<Product[]>;
-  @Input({required:true}) cart!: Signal<Product[]>;
+  @Input({required: true}) products!: Product[];
+  @Input({required: true}) cart!:Product[];
+  @Input({required: true}) action!: (product: Product) => void
+
   getStatus(product: Product): 'inCart' | 'available' {
-    return this.cart().some(p => p.id === product.id) ? 'inCart' : 'available';
+    return this.cart.some(p => p.id === product.id) ? 'inCart' : 'available';
   }
-  @Output() action = new EventEmitter<Product>();
-  protected readonly outerWidth = outerWidth;
+
 }

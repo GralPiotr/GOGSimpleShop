@@ -1,21 +1,37 @@
 <header class="header">
   <div class="container">
-    <img ngSrc="assets/img/GOG-Logo.svg"
-         alt="GOG Logo"
-         class="logo"
-         height="37"
-         width="43">
+    <img
+      ngSrc="assets/img/GOG-Logo.svg"
+      alt="GOG Logo"
+      class="logo"
+      height="37"
+      width="43"
+    />
 
-    <button (click)="showCart()" class="cart-button">
-      <span class="cart-icon-wrapper">
+    <div class="cart-wrapper">
+      <button (click)="showCart()" class="cart-button">
+        <span class="cart-icon-wrapper">
+          <img
+            ngSrc="assets/img/Cart.svg"
+            alt="Cart"
+            class="cart-icon"
+            height="15"
+            width="16"
+          />
+          <span class="cart-count">{{ cartSize() }}</span>
+        </span>
+      </button>
 
-      <img ngSrc="assets/img/Cart.svg" alt="GOG Logo"
-           class="cart-icon"
-           height="15"
-           width="16">
-      <span class="cart-count">2</span>
-    </span>
-    </button>
+      @if (isCartOpen()) {
+        <app-cart
+          class="cart-popover"
+          [products]="cart"
+          [quantity]="cartSize"
+          [totalPrice]="totalPrice"
+          [clearCart]="clearCart"
+          (click)="stopPropagation($event)"
+        />
+      }
+    </div>
   </div>
-
 </header>
