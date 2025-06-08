@@ -1,59 +1,74 @@
-# SimpleShop
+# 🛒 Simple Shop – Angular Demo Store
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.1.
+**Simple Shop** is a responsive Angular 20 demo application that mimics a basic game catalog with a shopping cart. It's built to showcase modern Angular capabilities, including Signals, Standalone Components, and a clean UI/UX flow.
 
-## Development server
+---
 
-To start a local development server, run:
+## ✨ Features
+
+- 🖼️ Product list with lazy loading (5 + 5 logic)
+- 🧃 "Game of the Week" banner support
+- 🛒 Cart powered by `Signal Store` (add, remove, clear)
+- 💾 Persistent cart state using `sessionStorage`
+- 📦 Interactive product cards (Owned / In Cart / Available status)
+- 🖼️ Fallback image support if `img` fails to load
+- 🔁 Simulated API calls via `ProductService` and RxJS `delay`
+- 🎨 CSS3 spinner, responsive layout, custom button styling
+- 🧪 Unit tests for components and services
+- 🌐 Favicon + optimized image loading with `NgOptimizedImage`
+
+---
+## 📁 Project Structure
+```bash 
+src/
+├── app/
+│   ├── common/            # Reusable components
+│   ├── stores/            # Signal-based stores
+│   ├── services/          # Product & cart logic
+│   ├── directives/        # Fallback image directive
+│   ├── mock-data/         # Product mock data
+│   └── home/              # Homepage feature
+├── assets/                # Images, icons and fonts
+├── styles.scss            # Global styling
+
+
+
+```
+
+## 🛠️ Technology Stack
+
+- Angular 20 (Standalone Components + Signals)
+- SCSS (Modular styling)
+- RxJS (with `signal()` and `computed()`)
+- Unit testing: Karma + Jasmine
+
+---
+
+## 🚀 Run the App
 
 ```bash
+npm install
+npm start 
+```
+or
+```bash 
 ng serve
-```
+ ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Navigate to: http://localhost:4200
+---
+## 🧪 Run Unit Tests
+```ng test```
 
-## Code scaffolding
+Includes tests for:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Cart / product state and storage
 
-```bash
-ng generate component component-name
-```
+- Header logic and cart visibility
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- Product listing & lazy loading
 
-```bash
-ng generate --help
-```
+- Fallback image directive
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Home loading and display logic
+___
