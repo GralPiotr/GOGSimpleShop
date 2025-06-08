@@ -25,7 +25,6 @@ describe('ProductService', () => {
       result = data;
     });
 
-    // 🔁 Symuluj czas (1500 ms)
     tick(1500);
 
     expect(result).toEqual(MOCK_PRODUCTS);

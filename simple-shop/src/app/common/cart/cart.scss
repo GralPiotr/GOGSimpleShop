@@ -12,6 +12,7 @@
     border-bottom: 1px solid #ddd;
     padding: 0 10px 10px 9px;
     height: 45.5px;
+
     .summary {
       font-weight: bold;
       text-transform: uppercase;
@@ -118,10 +119,10 @@
 
         position: relative;
         width: 75px;
-        height: 100%; // wysokość pełnej linii .cart-item
+        height: 100%;
         display: flex;
-        align-items: center; // <-- wycentrowanie pionowe finalnej ceny
-        justify-content: flex-end; // wyrównanie do prawej
+        align-items: center;
+        justify-content: flex-end;
 
         .original-price {
           position: absolute;
@@ -137,7 +138,7 @@
           font-weight: bold;
           color: #222;
           line-height: 1rem;
-          align-self: flex-end; // trzyma ją po prawej stronie
+          align-self: flex-end;
         }
       }
     }

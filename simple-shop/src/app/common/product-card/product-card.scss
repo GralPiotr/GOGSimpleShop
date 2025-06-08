@@ -1,8 +1,6 @@
 
 .card {
   background: #E0E0E0;
-
-  //box-shadow: 0px 1px 5px 0px #0000004D;
   width: 196px;
   height: 186px;
   @media (max-width: 1060px) {
@@ -29,7 +27,6 @@
       height: auto;
       aspect-ratio: 196 / 110;
       object-fit: cover;
-
 
     }
   }
