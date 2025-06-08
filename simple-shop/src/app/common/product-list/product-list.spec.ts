@@ -40,7 +40,7 @@ describe('ProductList', () => {
     component.products = mockProducts;
     fixture.detectChanges();
 
-    let button = fixture.debugElement.query(By.css('.show-more'));
+    let button = fixture.debugElement.query(By.css('.show-more-button'));
     expect(button).toBeTruthy();
 
     button.triggerEventHandler('click', {});

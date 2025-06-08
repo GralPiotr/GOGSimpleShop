@@ -41,7 +41,7 @@ export class Home {
   }
 
   featuredProduct() {
-    let product= this.products.find(product => {
+    let product = this.products.find(product => {
       return product.isFeatured === true
     })
     if (!product) {

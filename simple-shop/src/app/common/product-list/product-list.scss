@@ -6,13 +6,34 @@
   padding: 19px 0;
   flex-wrap: wrap;
 gap: 20px;
+  @media (max-width: 1060px) {
+    justify-content: center;
+  }
 }
 .show-more {
-  margin-top: 1rem;
   background: transparent;
-  border: 1px solid #ccc;
-  padding: 0.6rem 1.2rem;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
+  flex-basis: 100%;
+  text-align: center;
+  .show-more-button {
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(90deg, #7a3dc6, #b65ae2);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(122, 61, 198, 0.2);
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover {
+    background: linear-gradient(90deg, #6933b6, #a34fd1);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 10px rgba(122, 61, 198, 0.3);
+  }
+
+  button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(122, 61, 198, 0.2);
+  }
 }

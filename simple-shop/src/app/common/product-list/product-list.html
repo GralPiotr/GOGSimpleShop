@@ -7,9 +7,12 @@
         [status]="getStatus(product)"
       />
     }
-
+    <br/>
     @if (hasMore) {
-      <button class="show-more" (click)="showMore()">Show more</button>
-    }
+      <div class="show-more">
+        <button class="show-more-button " (click)="showMore()">Show more</button>
+
+      </div>
+      }
   </div>
 </ng-container>
