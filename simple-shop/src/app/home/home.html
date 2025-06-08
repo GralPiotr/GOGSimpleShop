@@ -1,8 +1,23 @@
-<div class="home">
-  <h4>GAME OF THE WEEK</h4>
-  <app-game-of-the-week-banner [product]="{name:'test',id:'test',price:19, imgUrl:'https://picsum.photos/id/237/1060/370'}"></app-game-of-the-week-banner>
-</div>
-<div class="list">
+@if (isLoading()) {
+  <div class="spinner-container">
+    <div class="spinner"></div>
+  </div>
+} @else if (products.length>0){
 
-<app-product-list [products]="products" [cart]="cart" [action]="addToCart"></app-product-list>
-</div>
+      <div class="home">
+      <h4>GAME OF THE WEEK</h4>
+      <app-game-of-the-week-banner
+        [product]="featuredProduct()"></app-game-of-the-week-banner>
+    </div>
+
+  <div class="list">
+    <app-product-list [products]="products" [cart]="cart" [action]="addToCart"></app-product-list>
+  </div>
+
+} @else {
+  <div class="no-available-products">
+    <span>
+      There are currently no products available
+    </span>
+  </div>
+}

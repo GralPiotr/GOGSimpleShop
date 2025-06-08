@@ -3,6 +3,7 @@ import {Product} from '@models/product.model';
 import {delay, Observable, of} from 'rxjs';
 import {MOCK_PRODUCTS} from '../mock-data/products.data';
 
+
 @Injectable({
   providedIn: 'root'
 })

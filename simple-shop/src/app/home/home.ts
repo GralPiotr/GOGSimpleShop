@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, Signal, signal} from '@angular/core';
 import {Product} from '@models/product.model';
 import {ProductList} from '../common/product-list/product-list';
 import {GameOfTheWeekBanner} from '../common/game-of-the-week-banner/game-of-the-week-banner';
@@ -17,6 +17,7 @@ import {ProductService} from '@services/product.service';
 })
 export class Home {
   addToCart!: (product: Product) => void;
+  isLoading = signal(false)
 
   constructor(
     public _productStore: ProductStore,
@@ -24,8 +25,10 @@ export class Home {
     public _productService: ProductService,
   ) {
     this.addToCart = this._cartStore.addToCart;
+    this.isLoading.set(true);
     this._productService.getProducts().subscribe(products => {
       this._productStore.setProducts(products)
+      this.isLoading.set(false);
     })
   }
 
@@ -37,4 +40,13 @@ export class Home {
     return this._cartStore.cart();
   }
 
+  featuredProduct() {
+    let product= this.products.find(product => {
+      return product.isFeatured === true
+    })
+    if (!product) {
+      return this.products[0];
+    }
+    return product;
+  }
 }

@@ -1,12 +1,12 @@
 <div class="cart-container">
   <div class="cart-header">
-    @if (products().length===1){
-      <span>{{ products().length }} ITEM IN CART</span>
+    @if (products().length === 1) {
+      <span class="summary">{{ products().length }} ITEM IN CART</span>
     } @else {
-      <span>{{ products().length }} ITEMS IN CART</span>
+      <span class="summary">{{ products().length }} ITEMS IN CART</span>
     }
 
-    <span>{{ totalPrice() | currency:'USD' }}</span>
+    <span class="total">{{ totalPrice() | currency:'USD' }}</span>
     <button (click)="clearCart()" class="clear-cart">
       <span>CLEAR CART</span>
     </button>
@@ -16,8 +16,20 @@
     @for (product of products(); track product.id) {
       <div class="item">
         <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [width]="100" [height]="60">
-        <span class="name">{{ product.name }}</span>
-        <span class="price">{{ product.price | currency:'USD' }}</span>
+        <span class="name">
+           <div class="title" [title]="product.name">{{ product.name }}</div>
+
+            <button class="remove-button" (click)="removeFromCart(product)">
+              Remove
+             </button>
+
+        </span>
+        <span class="price">
+             @if (product.discount) {
+               <div class="original-price">{{ product.price | currency:'USD' }}</div>
+             }
+          <div class="final-price">{{ discountedPrice(product) | currency:'USD' }}</div>
+        </span>
       </div>
     }
   </div>

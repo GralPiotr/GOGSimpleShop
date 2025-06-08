@@ -1,8 +1,18 @@
 .product-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   max-width: 1060px;
   margin: 0 auto;
-  padding: 2rem 0;
-  flex-wrap: nowrap;
+  padding: 19px 0;
+  flex-wrap: wrap;
+gap: 20px;
+}
+.show-more {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
 }

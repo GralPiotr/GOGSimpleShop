@@ -1,9 +1,15 @@
 <ng-container>
   <div class="product-list">
-    @for (product of products; track product.id) {
-      <app-product-card [product]="product" [status]="getStatus(product)" [action]="action">
+    @for (product of visibleProducts; track product.id) {
+      <app-product-card
+        [product]="product"
+        [action]="action"
+        [status]="getStatus(product)"
+      />
+    }
 
-      </app-product-card>
+    @if (hasMore) {
+      <button class="show-more" (click)="showMore()">Show more</button>
     }
   </div>
 </ng-container>

@@ -1,9 +1,48 @@
-.home{
+.home {
   margin: auto;
   max-width: 1060px;
-  h4{
-    color:#262626;
 
+  h4 {
+    align-content: center;
+    color: #262626;
+    margin: 28px 0 20px;
+    height: 25px;
   }
 }
-
+.no-available-products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  border: 2px dashed #b65ae2;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 640px;
+  margin: 2rem auto;
+  text-transform: uppercase;
+  color: #7a3dc6;
+  background: rgba(245, 245, 255, 0.6);
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(122, 61, 198, 0.2);
+}
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+  .spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #d3d3d3;
+    border-top-color: #7a3dc6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

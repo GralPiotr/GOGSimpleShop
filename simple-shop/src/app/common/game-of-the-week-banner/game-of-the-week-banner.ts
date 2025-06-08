@@ -15,7 +15,7 @@ export class GameOfTheWeekBanner {
   @Output() addToCart = new EventEmitter<Product>();
 
   onClick() {
-    console.log(this.product);
+
     this.addToCart.emit(this.product);
   }
 }
