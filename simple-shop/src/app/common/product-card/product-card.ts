@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Product} from '@models/product.model';
-import {CurrencyPipe, NgOptimizedImage, PercentPipe, UpperCasePipe} from '@angular/common';
+import {CurrencyPipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
 
 @Component({
   selector: 'app-product-card',

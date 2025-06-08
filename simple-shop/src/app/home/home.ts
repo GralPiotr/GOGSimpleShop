@@ -1,4 +1,4 @@
-import {Component, Signal, signal} from '@angular/core';
+import {Component,  signal} from '@angular/core';
 import {Product} from '@models/product.model';
 import {ProductList} from '../common/product-list/product-list';
 import {GameOfTheWeekBanner} from '../common/game-of-the-week-banner/game-of-the-week-banner';

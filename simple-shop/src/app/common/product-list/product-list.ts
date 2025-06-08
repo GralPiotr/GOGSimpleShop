@@ -1,7 +1,7 @@
-import {Component, computed, EventEmitter, Input, Output, signal, Signal} from '@angular/core';
+import {Component, Input, signal} from '@angular/core';
 import {Product} from '@models/product.model';
 import {ProductCard} from '../product-card/product-card';
-import {JsonPipe} from '@angular/common';
+
 
 @Component({
   selector: 'app-product-list',

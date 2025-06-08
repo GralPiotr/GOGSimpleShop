@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Cart } from './cart';
-import { CurrencyPipe } from '@angular/common';
 import { signal } from '@angular/core';
 import { Product } from '@models/product.model';
 
