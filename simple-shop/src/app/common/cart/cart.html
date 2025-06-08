@@ -15,7 +15,8 @@
   <div class="cart-items">
     @for (product of products(); track product.id) {
       <div class="item">
-        <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [width]="100" [height]="60" [alt]="product.name">
+        <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [width]="100" [height]="60" [alt]="product.name"
+             fallbackSrc="assets/img/No-Image-Placeholder.svg.png">
         <span class="name">
            <div class="title" [title]="product.name">{{ product.name }}</div>
 

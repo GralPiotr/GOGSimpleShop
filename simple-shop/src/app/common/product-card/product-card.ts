@@ -1,13 +1,16 @@
 import {Component, Input} from '@angular/core';
 import {Product} from '@models/product.model';
 import {CurrencyPipe, NgOptimizedImage, UpperCasePipe} from '@angular/common';
+import {FallbackImg} from '../../directives/fallback-img';
 
 @Component({
   selector: 'app-product-card',
   imports: [
     CurrencyPipe,
     NgOptimizedImage,
-    UpperCasePipe
+    UpperCasePipe,
+    FallbackImg,
+    FallbackImg
   ],
   templateUrl: './product-card.html',
   styleUrl: './product-card.scss'
@@ -21,4 +24,5 @@ export class ProductCard {
   onCLick(): void {
     this.action(this.product);
   }
+
 }

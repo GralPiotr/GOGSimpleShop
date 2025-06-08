@@ -1,10 +1,11 @@
 import {Component, Input, Signal} from '@angular/core';
 import {Product} from '@models/product.model';
 import {CurrencyPipe, NgOptimizedImage} from '@angular/common';
+import {FallbackImg} from '../../directives/fallback-img';
 
 @Component({
   selector: 'app-cart',
-  imports: [CurrencyPipe, NgOptimizedImage],
+  imports: [CurrencyPipe, NgOptimizedImage, FallbackImg],
   templateUrl: './cart.html',
   styleUrl: './cart.scss',
 

@@ -1,8 +1,8 @@
 @if (product) {
   <div class="card">
     <div class="image-container">
-      <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [height]="'370'" [width]="'100'" [alt]="product.name"
-           class="card-image">
+      <img [ngSrc]="product.imgUrl?product.imgUrl:'s'" [height]="'110'" [width]="'196'" [alt]="product.name"
+           class="card-image" fallbackSrc="assets/img/No-Image-Placeholder.svg.png">
 
     </div>
     <div class="content-container">
@@ -17,7 +17,7 @@
           <button disabled >IN CART</button>
         } @else if (status === 'available') {
           @if (product.discount) {
-            <span class="discount-badge" inert>-{{product.discount}}%</span>
+            <span class="discount-badge">-{{product.discount}}%</span>
           }
           <button (click)="onCLick()">{{ product.price | currency }}</button>
         }

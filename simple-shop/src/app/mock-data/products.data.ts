@@ -5,36 +5,36 @@ export const MOCK_PRODUCTS: Product[] = [
     name: 'Cyberpunk 2077',
     price: 59.99,
     discount: 40,
-
-    imgUrl: 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc6kz2.png',
+    isFeatured: true,
+    imgUrl: 'https://www.cdprojekt.com/pl/wp-content/uploads-pl/2023/12/ue-image-3840x2160-1-1024x576.jpg',
   },
   {
     id: '2',
     name: 'The Witcher 3: Wild Hunt',
     price: 49.99,
-    imgUrl: 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/scoh3r.png',
+    imgUrl: 'https://images.gog-statics.com/71d71c40052877a42c096b8230c71856a560d42132208cfa8e719243b5c6626b_product_card_v2_mobile_slider_639.jpg',
   },
   {
     id: '3',
     name: 'Half-Life',
     price: 9.99,
     discount: 50,
-    isFeatured: true,
-    imgUrl: 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc6kzj.png',
+
+    imgUrl: 'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/70/header.jpg?t=1745368462',
   },
   {
     id: '4',
     name: 'Baldur’s Gate II: Shadows of Amn',
     price: 4.99,
     isOwned: true,
-    imgUrl: 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc6l4d.png',
+    imgUrl: 'https://kulturaobrazkowa.pl/wp-content/uploads/2019/08/Baldurs-Gate-II-2000.jpg',
   },
   {
     id: '5',
     name: 'Planescape: Torment',
     price: 6.99,
     discount: 30,
-    imgUrl: 'https://images.igdb.com/igdb/image/upload/t_screenshot_big/sc6kyp.png',
+    imgUrl: 'https://images.igdb.com/igdb/image/upload/t_scresenshot_big/sc6kyp.png',
   },
   {
     id: '6',
